@@ -1,7 +1,7 @@
 -- main pallete
 local p = {
     dark = "#000000",
-    rgray = "#d4d4d4",
+    gray = "#d4d4d4",
     dgray = "#686868",
     yellow = "#fbca60",
     red = "#ff0000",
@@ -9,7 +9,10 @@ local p = {
 
 -- theme
 local theme = {
-    String = { fg = p.yellow, bg = "NONE", gui = "italic" },
+    Normal = { fg = p.gray },
+    NormalNC = { fg = p.gray },
+    NormalFloat = { fg = p.gray },
+    String = { fg = p.yellow, gui = "italic" },
 }
 
 function link(group, table)
