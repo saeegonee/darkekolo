@@ -1,14 +1,24 @@
 local scheme = {}
 
 -- main pallete
-local pallete = {
-    bg = "#000000",
-}
 
 -- theme
 local theme = {
-    Normal = { fg = pallete.bg, bg = pallete.bg },
+    Statement = {
+        fg = "Cyan",
+        bg = "White",
+        gui = "bolt,italic"
+    },
 }
+
+function link(group, table)
+
+    local fg = table.fg or "NONE"
+    local bg = table.bg or "NONE"
+    local gui = table.gui or "NONE"
+
+    vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg .. " gui=" .. gui)
+end
 
 function scheme.build()
     -- construct colorscheme. Good playlist at:
@@ -19,12 +29,12 @@ function scheme.build()
     end
     
     -- setup
-    vim.opt.termguicolors = true
-    vim.g.colors_name = 'darkekolo'
+    -- vim.opt.termguicolors = true
+    -- vim.g.colors_name = 'darkekolo'
     
     -- links
-    for group, color in pairs(theme) do
-        -- vim.cmd('hi <group> <color>')
+    for group, table in pairs(theme) do
+        link(group, table)
     end
 end
 
