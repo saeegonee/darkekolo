@@ -1,22 +1,22 @@
 -- main pallete
 
 -- theme
--- local theme = {
---     String = {
---         fg = "Cyan",
---         bg = "White",
---         gui = "bolt,italic"
---     },
--- }
+local theme = {
+    String = {
+        fg = "Cyan",
+        bg = "White",
+        gui = "bolt,italic"
+    },
+}
 
--- function link(group, table)
+function link(group, table)
 
---     local fg = table.fg or "NONE"
---     local bg = table.bg or "NONE"
---     local gui = table.gui or "NONE"
+    local fg = table.fg or "NONE"
+    local bg = table.bg or "NONE"
+    local gui = table.gui or "NONE"
 
---     vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg .. " gui=" .. gui)
--- end
+    vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg .. " gui=" .. gui)
+end
 
 local M = {}
 
@@ -32,10 +32,10 @@ function M.colorscheme()
     -- vim.opt.termguicolors = true
     -- vim.g.colors_name = 'darkekolo'
     
-    -- links
-    -- for group, table in pairs(theme) do
-    --     link(group, table)
-    -- end
+    links
+    for group, table in pairs(theme) do
+        link(group, table)
+    end
 end
 
 return M
