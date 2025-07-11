@@ -36,7 +36,6 @@ local theme = {
     Title = { fg = p.gray },
     Todo = { fg = p.gray },
     Type = { fg = p.gray },
-    Underlined = { fg = p.gray },
 }
 
 function link(group, table)
