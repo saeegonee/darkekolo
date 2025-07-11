@@ -5,7 +5,7 @@ local theme = {
     String = {
         fg = "Cyan",
         bg = "White",
-        gui = "bolt,italic"
+        gui = "bold,italic"
     },
 }
 
