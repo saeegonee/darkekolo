@@ -1,4 +1,4 @@
-local scheme = {}
+local darkekolo = {}
 
 -- main pallete
 
@@ -20,7 +20,7 @@ function link(group, table)
     vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg .. " gui=" .. gui)
 end
 
-function scheme.build()
+function darkekolo.colorscheme()
     -- construct colorscheme. Good playlist at:
     -- https://www.youtube.com/watch?v=qyKeorLz-Cg&list=PLOe6AggsTaVvjY25kxHlGccbYfe7hSqtp&index=3
 
@@ -38,4 +38,4 @@ function scheme.build()
     end
 end
 
-return scheme
+return darkekolo
