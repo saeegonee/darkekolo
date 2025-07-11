@@ -86,7 +86,7 @@ local theme = {
 	FloatBorder = { fg = p.gray },
 	Function = { fg = p.gray },
 	Include = { fg = p.gray },
-	Keyword = { fg = p.gray },
+	Keyword = { fg = p.dgray },
 	Label = { fg = p.gray },
 	Macro = { fg = p.gray },
 	Number = { fg = p.gray },
