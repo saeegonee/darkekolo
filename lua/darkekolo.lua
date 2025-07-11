@@ -1,12 +1,15 @@
 -- main pallete
+local p = {
+    dark = "#000000",
+    rgray = "#d4d4d4",
+    dgray = "#686868",
+    yellow = "#fbca60",
+    red = "#ff0000",
+}
 
 -- theme
 local theme = {
-    String = {
-        fg = "Cyan",
-        bg = "White",
-        gui = "bold,italic"
-    },
+    String = { fg = p.yellow, bg = "NONE", gui = "italic" },
 }
 
 function link(group, table)
