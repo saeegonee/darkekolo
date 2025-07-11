@@ -29,8 +29,8 @@ function M.colorscheme()
     end
     
     -- setup
-    -- vim.opt.termguicolors = true
-    -- vim.g.colors_name = 'darkekolo'
+    vim.opt.termguicolors = true
+    vim.g.colors_name = 'darkekolo'
     
     -- links
     for group, table in pairs(theme) do
