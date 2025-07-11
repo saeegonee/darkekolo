@@ -1,10 +1,8 @@
-local darkekolo = {}
-
 -- main pallete
 
 -- theme
 local theme = {
-    Statement = {
+    String = {
         fg = "Cyan",
         bg = "White",
         gui = "bolt,italic"
@@ -20,7 +18,9 @@ function link(group, table)
     vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg .. " gui=" .. gui)
 end
 
-function darkekolo.colorscheme()
+local M = {}
+
+function M.colorscheme()
     -- construct colorscheme. Good playlist at:
     -- https://www.youtube.com/watch?v=qyKeorLz-Cg&list=PLOe6AggsTaVvjY25kxHlGccbYfe7hSqtp&index=3
 
@@ -38,4 +38,4 @@ function darkekolo.colorscheme()
     end
 end
 
-return darkekolo
+return M
