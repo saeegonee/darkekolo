@@ -18,33 +18,24 @@
 --     vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg .. " gui=" .. gui)
 -- end
 
--- local M = {}
+local M = {}
 
--- function M.colorscheme()
---     -- construct colorscheme. Good playlist at:
---     -- https://www.youtube.com/watch?v=qyKeorLz-Cg&list=PLOe6AggsTaVvjY25kxHlGccbYfe7hSqtp&index=3
+function M.colorscheme()
+    -- construct colorscheme. Good playlist at:
+    -- https://www.youtube.com/watch?v=qyKeorLz-Cg&list=PLOe6AggsTaVvjY25kxHlGccbYfe7hSqtp&index=3
 
---     if vim.g.colors_name then
---         vim.cmd('hi clear')
---     end
+    if vim.g.colors_name then
+        vim.cmd('hi clear')
+    end
     
---     -- setup
---     -- vim.opt.termguicolors = true
---     -- vim.g.colors_name = 'darkekolo'
+    -- setup
+    -- vim.opt.termguicolors = true
+    -- vim.g.colors_name = 'darkekolo'
     
---     -- links
---     -- for group, table in pairs(theme) do
---     --     link(group, table)
---     -- end
--- end
-
--- return M
-
-
-local M = {} -- M stands for module, a naming convention
-
-function M.setup()
-   print("hello")
+    -- links
+    -- for group, table in pairs(theme) do
+    --     link(group, table)
+    -- end
 end
 
 return M
