@@ -32,7 +32,7 @@ function M.colorscheme()
     -- vim.opt.termguicolors = true
     -- vim.g.colors_name = 'darkekolo'
     
-    links
+    -- links
     for group, table in pairs(theme) do
         link(group, table)
     end
