@@ -9,10 +9,34 @@ local p = {
 
 -- theme
 local theme = {
-    Normal = { fg = p.gray },
-    NormalNC = { fg = p.gray },
-    NormalFloat = { fg = p.gray },
-    String = { fg = p.yellow, gui = "italic" },
+    Boolean = { fg = p.gray },
+    Character = { fg = p.gray },
+    Comment = { fg = p.dgray },
+    Conditional = { fg = p.dgray },
+    Constant = { fg = p.gray },
+    Todo = { fg = p.dgray },
+    Define = { fg = p.dgray },
+    ErrorMsg = { fg = p.red },
+    WarningMsg = { fg = p.yellow },
+    Float = { fg = p.yellow },
+    Function = { fg = p.gray },
+    Identifier = { fg = p.gray },
+    Keyword = { fg = d.dgray },
+    Label = { fg = p.gray },
+    NonText = { fg = p.gray },
+    Number = { fg = p.gray },
+    Operator = { fg = p.dgray },
+    PreProc = { fg = p.dgray },
+    Special = { fg = p.gray },
+    SpecialKey = { fg = p.gray },
+    Statement = { fg = p.dgray },
+    StorageClass = { fg = p.gray },
+    String = { fg = p.yellow },
+    Tag = { fg = p.dgray },
+    Title = { fg = p.gray },
+    Todo = { fg = p.gray },
+    Type = { fg = p.gray },
+    Underlined = { fg = p.gray },
 }
 
 function link(group, table)
