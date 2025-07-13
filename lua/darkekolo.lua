@@ -1,10 +1,10 @@
 -- main pallete
 local p = {
-    dark = "#0c0c0c",
+    dark = "#151515",
     gray = "#aaaaaa",
     dgray = "#686868",
     yellow = "#fbca60",
-    red = "#ff0000",
+    red = "#cc3333",
 }
 
 -- theme
