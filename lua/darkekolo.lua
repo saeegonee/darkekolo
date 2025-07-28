@@ -89,7 +89,7 @@ local common = {
 	Include         = { fg = p.gray },
 	Keyword         = { fg = p.dgray },
 	Label           = { fg = p.gray },
-	Macro           = { fg = p.gray },
+	Macro           = { fg = p.dgray },
 	Number          = { fg = p.gray },
 	Operator        = { fg = p.gray },
 	PreCondit       = { fg = p.gray },
