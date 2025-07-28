@@ -84,7 +84,7 @@ local common = {
 	Error           = { fg = p.gray },
 	Exception       = { fg = p.gray },
 	Float           = { fg = p.yellow },
-	Function        = { fg = p.gray },
+	Function        = { fg = p.dgray },
 	Identifier      = { fg = p.gray },
 	Include         = { fg = p.gray },
 	Keyword         = { fg = p.dgray },
@@ -110,23 +110,13 @@ local common = {
 	Typedef         = { fg = p.gray },
 }
 
-local cmp = {
-    CmpGhostText          = { fg = p.gray },
-    CmpItemAbbr           = { fg = p.gray },
-    CmpItemAbbrDeprecated = { fg = p.gray },
-    CmpItemAbbrMatch      = { fg = p.gray },
-    CmpItemAbbrMatchFuzzy = { fg = p.gray },
-    CmpItemMenu           = common["Pmenu"],
-    CmpKind               = { fg = p.gray },
-}
-
 local treesitter = {
     ["@attribute"]             = common["Constant"],
     ["@boolean"]               = common["Boolean"],
     ["@character"]             = common["String"],
     ["@character.special"]     = common["SpecialChar"],
     ["@constant"]              = common["Constant"],
-    ["@constant.builtin"]      = { fg = p.gray },
+    ["@constant.builtin"]      = common["Constant"],
     ["@constant.macro"]        = common["Macro"],
     ["@constructor"]           = { fg = p.gray },
     ["@constructor.lua"]       = { fg = p.gray },
@@ -136,17 +126,17 @@ local treesitter = {
     ["@diff.delta"]            = { fg = p.gray },
     ["@diff.minus"]            = { fg = p.gray },
     ["@function"]              = common["Function"],
-    ["@function.builtin"]      = { fg = p.gray },
-    ["@function.call"]         = { fg = p.gray },
+    ["@function.builtin"]      = common["Function"],
+    ["@function.call"]         = common["Function"],
     ["@function.macro"]        = common["Macro"],
-    ["@function.method"]       = { fg = p.gray },
-    ["@function.method.call"]  = { fg = p.gray },
-    ["@keyword"]               = { fg = p.gray },
-    ["@keyword.conditional"]   = { fg = p.gray },
+    ["@function.method"]       = common["Function"],
+    ["@function.method.call"]  = common["Function"],
+    ["@keyword"]               = common["Keyword"]
+    ["@keyword.conditional"]   = common["Conditional"]
     ["@keyword.exception"]     = common["Exception"],
     ["@keyword.import"]        = common["PreProc"],
-    ["@keyword.operator"]      = { fg = p.gray },
-    ["@keyword.return"]        = { fg = p.gray },
+    ["@keyword.operator"]      = common["Keyword"],
+    ["@keyword.return"]        = common["Keyword"],
     ["@label"]                 = common["Label"],
     ["@markup"]                = { fg = p.gray },
     ["@markup.heading"]        = { fg = p.gray },
@@ -212,6 +202,16 @@ local lsp = {
     ["@lsp.typemod.function.definition"]     = treesitter["@function"],
     ["@lsp.typemod.variable.defaultLibrary"] = treesitter["@constant.builtin"],
     ["@lsp.typemod.variable.definition"]     = treesitter["@property"],
+}
+
+local cmp = {
+    CmpGhostText          = { fg = p.gray },
+    CmpItemAbbr           = { fg = p.gray },
+    CmpItemAbbrDeprecated = { fg = p.gray },
+    CmpItemAbbrMatch      = { fg = p.gray },
+    CmpItemAbbrMatchFuzzy = { fg = p.gray },
+    CmpItemMenu           = common["Pmenu"],
+    CmpKind               = { fg = p.gray },
 }
 
 local lualine = {
