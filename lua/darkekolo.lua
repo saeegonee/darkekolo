@@ -110,27 +110,27 @@ local common = {
 	Typedef         = { fg = p.gray },
 }
 
--- local cmp{
+-- local cmp = {
 --
 -- }
 --
--- local lsp{
+-- local lsp = {
 --
 -- }
 --
--- local lualine{
+-- local lualine = {
 --
 -- }
 --
--- local neotest{
+-- local neotest = {
 --
 -- }
 --
--- local telescope{
+-- local telescope = {
 --
 -- }
 
-local treesitter{
+local treesitter = {
     ["@attribute"]             = common["Constant"],
     ["@boolean"]               = common["Boolean"],
     ["@character"]             = common["String"],
