@@ -110,25 +110,93 @@ local common = {
 	Typedef         = { fg = p.gray },
 }
 
--- local cmp = {
---
--- }
---
--- local lsp = {
---
--- }
---
--- local lualine = {
---
--- }
---
--- local neotest = {
---
--- }
---
--- local telescope = {
---
--- }
+local cmp = {
+    CmpGhostText          = { fg = p.gray },
+    CmpItemAbbr           = { fg = p.gray },
+    CmpItemAbbrDeprecated = { fg = p.gray },
+    CmpItemAbbrMatch      = { fg = p.gray },
+    CmpItemAbbrMatchFuzzy = { fg = p.gray },
+    CmpItemMenu           = common["Pmenu"],
+    CmpKind               = { fg = p.gray },
+}
+
+local lsp = {
+    ["@lsp.type.builtinConstant"]            = treesitter["@constant.builtin"],
+    ["@lsp.type.builtinType"]                = treesitter["@type.builtin"],
+    ["@lsp.type.class"]                      = common["Structure"],
+    ["@lsp.type.comment"]                    = common["Comment"],
+    ["@lsp.type.enum"]                       = common["Structure"],
+    ["@lsp.type.enumMember"]                 = treesitter["@variable.member"],
+    ["@lsp.type.function"]                   = treesitter["@function.call"],
+    ["@lsp.type.generic"]                    = treesitter["@type"],
+    ["@lsp.type.interface"]                  = common["Structure"],
+    ["@lsp.type.macro"]                      = common["Macro"],
+    ["@lsp.type.method"]                     = treesitter["@function.method"],
+    ["@lsp.type.namespace"]                  = treesitter["@module"],
+    ["@lsp.type.parameter"]                  = treesitter["@variable.parameter"],
+    ["@lsp.type.property"]                   = treesitter["@type"],
+    ["@lsp.type.selfParameter"]              = common["Special"],
+    ["@lsp.type.typeParameter"]              = common["Typedef"],
+    ["@lsp.type.variable"]                   = treesitter["@constant"],
+    ["@lsp.typemod.function"]                = treesitter["@function.call"],
+    ["@lsp.typemod.function.builtin"]        = treesitter["@function.builtin"],
+    ["@lsp.typemod.function.defaultLibrary"] = treesitter["@function.builtin"],
+    ["@lsp.typemod.function.definition"]     = treesitter["@function"],
+    ["@lsp.typemod.variable.defaultLibrary"] = treesitter["@constant.builtin"],
+    ["@lsp.typemod.variable.definition"]     = treesitter["@property"],
+}
+
+local lualine = {
+    visual = {
+        a = { fg = p.gray, bg = p.dgray },
+        b = { fg = p.gray, bg = p.dgray },
+    },
+    replace = {
+        a = { fg = p.gray, bg = p.dgray },
+        b = { fg = p.gray, bg = p.dgray },
+    },
+    inactive = {
+        a = { fg = p.gray, bg = p.dgray },
+        b = { fg = p.gray, bg = p.dgray },
+        c = { fg = p.gray, bg = p.dgray },
+    },
+    normal = {
+        a = { fg = p.gray, bg = p.dgray },
+        b = { fg = p.gray, bg = p.dgray },
+        c = { fg = p.gray, bg = p.dgray },
+    },
+    insert = {
+        a = { fg = p.gray, bg = p.dgray },
+        b = { fg = p.gray, bg = p.dgray },
+    },
+}
+
+local neotest = {
+    NeotestTest             = { fg = p.gray },
+    NeotestUnknown          = { fg = p.gray },
+    NeotestDir              = { fg = p.gray },
+    NeotestFile             = { fg = p.gray },
+    NeotestPassed           = { fg = p.gray },
+    NeotestFailed           = { fg = p.gray },
+    NeotestMarked           = { fg = p.gray },
+    NeotestWatching         = { fg = p.gray },
+    NeotestTarget           = { fg = p.gray },
+    NeotestFocused          = { fg = p.gray },
+    NeotestRunning          = { fg = p.gray },
+    NeotestAdapterName      = { fg = p.gray },
+    NeotestNamespace        = { fg = p.gray },
+    NeotestSkipped          = { fg = p.gray },
+    NeotestIndent           = { fg = p.gray },
+}
+
+local telescope = {
+    TelescopeBorder           = { fg = p.gray },
+    TelescopeMatching         = { fg = p.gray },
+    TelescopePromptPrefix     = { fg = p.gray },
+    TelescopeSelection        = { fg = p.yellow },
+    TelescopeSelectionCaret   = { fg = p.red },
+    TelescopeResultsNormal    = { fg = p.gray },
+}
 
 local treesitter = {
     ["@attribute"]             = common["Constant"],
@@ -224,6 +292,26 @@ function M.colorscheme()
     for group, table in pairs(common) do
         link(group, table)
     end
+
+    for group, table in pairs(cmp) do
+        link(group, table)
+    end 
+
+    for group, table in pairs(lsp) do
+        link(group, table)
+    end 
+
+    for group, table in pairs(lualine) do
+        link(group, table)
+    end 
+
+    for group, table in pairs(neotest) do
+        link(group, table)
+    end 
+
+    for group, table in pairs(telescope) do
+        link(group, table)
+    end 
 
     for group, table in pairs(treesitter) do
         link(group, table)
