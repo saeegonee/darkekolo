@@ -80,7 +80,7 @@ local common = {
 	Conditional     = { fg = p.gray },
 	Constant        = { fg = p.gray },
 	Define          = { fg = p.gray },
-    Delimiter       = { fg = c.gray },
+    Delimiter       = { fg = p.gray },
 	Error           = { fg = p.gray },
 	Exception       = { fg = p.gray },
 	Float           = { fg = p.yellow },
