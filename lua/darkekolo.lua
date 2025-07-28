@@ -1,7 +1,7 @@
 -- main pallete
 local p = {
     dark = "#151515",
-    gray = "#aaaaaa",
+    gray = "#c1c1c1",
     dgray = "#686868",
     yellow = "#fbca60",
     red = "#cc3333",
